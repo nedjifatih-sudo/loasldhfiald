@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { MessageSquare, RotateCcw, Send, X } from 'lucide-react';
 
-const WEBHOOK_URL = 'https://jkyusuf.app.n8n.cloud/webhook/portfolio-chat';
+const WEBHOOK_URL =
+  import.meta.env.VITE_CHATBOT_WEBHOOK_URL?.trim() ||
+  'https://jkyusuf.app.n8n.cloud/webhook/portfolio-chat';
 
 interface ChatMessage {
   id: string;
